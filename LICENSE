@@ -1,1 +1,11 @@
-TODO: Add your license here.
+
+---
+
+### ✅ `CHANGELOG.md`
+
+```markdown
+## [0.1.0] - Initial release
+
+- First stable release of the `cupertino_stepper` package
+- Implements a basic iOS-style stepper using `CupertinoButton`
+- Supports: value, min, max, step, onChanged, onIncrement, onDecrement
