@@ -1,39 +1,30 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# numeric_steeper
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
+[![pub version](https://img.shields.io/pub/v/numeric_steeper.svg)](https://pub.dev/packages/numeric_steeper)
+[![likes](https://img.shields.io/pub/likes/numeric_steeper.svg)](https://pub.dev/packages/numeric_steeper)
+[![pub points](https://img.shields.io/pub/points/numeric_steeper.svg)](https://pub.dev/packages/numeric_steeper)
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
+A custom, minimal **iOS-style stepper widget** for Flutter.  
+Inspired by Swift’s `UIStepper`, this widget allows users to increment or decrement a numeric value with a sleek, Cupertino-like look.
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+![demo](example/demo.gif)
 
-## Features
+---
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+## ✨ Features
 
-## Getting started
+- Fully **Cupertino-styled**
+- Lightweight and dependency-free
+- Supports custom step size, min/max limits, and callbacks
+- Simple and customizable
+- Works with `int` values out of the box
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+---
 
-## Usage
+## 🚀 Getting Started
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+Add to your `pubspec.yaml`:
 
-```dart
-const like = 'sample';
-```
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+```yaml
+dependencies:
+  numeric_steeper: ^0.1.0
