@@ -64,6 +64,8 @@ Use the `NumericSteeper` widget in your Flutter app:
 
 ### Example
 
+![Demo](https://raw.githubusercontent.com/VladimirFelix/NumericSteeper/refs/heads/main/example/numeric_steeper_sample.gif)
+
 
 
 
