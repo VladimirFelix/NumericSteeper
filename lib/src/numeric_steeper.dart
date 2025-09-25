@@ -11,11 +11,13 @@ class NumericSteeper extends StatefulWidget {
   final Color buttonsBackgroundColor;
   final Color iconsColor;
   final Color dividerColor;
+  final num value;
 
   final ValueChanged<num>? changed;
 
   const NumericSteeper({
     super.key,
+    required this.value,
     this.increaseIcon = Icons.add,
     this.decreaseIcon = Icons.remove,
     this.backgroundColor = Colors.black12,
@@ -40,7 +42,7 @@ class _NumericSteeperState extends State<NumericSteeper> {
     backgroundColor: WidgetStateProperty.all(Colors.transparent),
     overlayColor: WidgetStateProperty.all(Colors.grey.shade400),
     shape: WidgetStateProperty.all<RoundedRectangleBorder>(
-      RoundedRectangleBorder(
+      const RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(2)),
       ),
     ),
@@ -49,11 +51,12 @@ class _NumericSteeperState extends State<NumericSteeper> {
   @override
   void didUpdateWidget(covariant NumericSteeper oldWidget) {
     super.didUpdateWidget(oldWidget);
+    value = widget.value;
     _steeperButtonStyle = ButtonStyle(
       overlayColor: WidgetStateProperty.all(widget.overlayColor),
       backgroundColor: WidgetStateProperty.all(widget.buttonsBackgroundColor),
       shape: WidgetStateProperty.all<RoundedRectangleBorder>(
-        RoundedRectangleBorder(
+        const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(8)),
         ),
       ),
@@ -76,9 +79,10 @@ class _NumericSteeperState extends State<NumericSteeper> {
               style: _steeperButtonStyle,
               onPressed: () {
                 if (widget.changed == null) return;
-
-                if (value > widget.minValue) {
-                  value -= widget.step;
+                if (widget.value > widget.minValue) {
+                  value = (widget.value - widget.step) < widget.minValue
+                      ? widget.minValue
+                      : widget.value - widget.step;
                   widget.changed!(value);
                 }
               },
@@ -102,8 +106,10 @@ class _NumericSteeperState extends State<NumericSteeper> {
               style: _steeperButtonStyle,
               onPressed: () {
                 if (widget.changed == null) return;
-                if (value < widget.maxValue) {
-                  value += widget.step;
+                if (widget.value < widget.maxValue) {
+                  value = (widget.value + widget.step) > widget.maxValue
+                      ? widget.maxValue
+                      : widget.value + widget.step;
                   widget.changed!(value);
                 }
               },

@@ -1,2 +1,3 @@
-## 0.1.0 - 2025-09-20
-- Initial release of `numeric_steeper`: iOS-like stepper widget for Flutter.
+## 0.2.0
+- Added documentation and examples to the README file.
+- Solve issues with max and min values.
