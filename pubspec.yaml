@@ -1,6 +1,6 @@
 name: numeric_steeper
 description: "Numeric steeper widget designed to work similar to iOS steeper, supports minimum value, max value and full customization."
-version: 0.2.0
+version: 0.2.1
 homepage: https://github.com/VladimirFelix/NumericSteeper
 repository: https://github.com/VladimirFelix/NumericSteeper
 issue_tracker: https://github.com/VladimirFelix/NumericSteeper/issues
